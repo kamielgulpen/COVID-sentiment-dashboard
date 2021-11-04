@@ -11,7 +11,7 @@
     <script type="text/javascript" src="json_correlation.json"></script>
     <script src="pearson.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <title>Covid Sentiment Dashboard</title> 
+    <title>Chart.js Jittered Data - Custom Function</title> 
     	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
    </head>
@@ -43,19 +43,27 @@
                     </div>
                   </div></li>
                   <li><button type="button" class="btn btn-dark" onclick="myFunction('key', 'Date', 'Key-words',' Sentiment')">Key-words</button></li>
-                  <li><button type="button" class="btn btn-dark"  onclick="myFunction('bar', 'Sentiment', 'Sentiment Distribution','Count')">Distributions</button></li>
-                  
+                  <li><div class="dropdown" id="buttonddc">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Distributions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button type="button" class="dropdown-item"  onclick="myFunction('bar', 'Sentiment', 'Sentiment Distribution','Count (log)')">Sentiment</button>
+                        <button type="button" class="dropdown-item"  onclick="myFunction('loglog', 'PageRank (log)', 'PageRank Distribution','Count (log)')">PageRank</button>
+
+                    </div>
+                  </div></li>
             </ul>
             <div class="social_media"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
         </div>
         <div class="main_content">
-            <div class="header">Covid-19 UK sentiment Dashboard</div>
+            <div class="header">Covid-19 UK web page sentiment Dashboard</div>
             <div class="info">
                 
       
                 <div id = 'demo'></div>
                 <div id="myChart" width="600" height="300"></div>
-                
+                <div id ="extraChart"width="600" height="300"></div>
                 <div id="correlation_values"></div>
 
                     
